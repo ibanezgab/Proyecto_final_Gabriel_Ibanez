@@ -1,0 +1,158 @@
+{% extends 'general/base.html' %}
+
+{%load static %}
+
+{% block contenido_central  %}
+
+
+
+	<section id="explore">
+		<div class="container">
+			<div class="row">
+				<div class="watch">
+					<img class="img-responsive" src="{% static 'general/images/watch.png'%}" alt="">
+				</div>				
+				<div class="col-md-4 col-md-offset-2 col-sm-5">
+					<h2>nuestro evento es el</h2>
+				</div>				
+				<div class="col-sm-7 col-md-6">					
+					<ul id="countdown">
+						<li>					
+							<span class="days time-font">20</span>
+							<p>dia </p>
+						</li>
+						<li>
+							<span class="hours time-font">05</span>
+							<p class="">mes </p>
+						</li>
+						<li>
+							<span class="minutes time-font">17</span>
+							<p class="">hora</p>
+						</li>
+						<li>
+							<span class="seconds time-font">30</span>
+							<p class="">minutos</p>
+						</li>				
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</section><!--/#explore-->
+
+	<section id="event">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-9">
+					<div id="event-carousel" class="carousel slide" data-interval="false">
+						<h2 class="heading">Bandas</h2>
+						<a class="even-control-left" href="#event-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+						<a class="even-control-right" href="#event-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{% static 'general/images/event/event1.jpg' %}" alt="event-image">
+											<h4>Los Benningtons</h4>
+											<h5></h5>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{% static 'general/images/event/event2.jpg' %}" alt="event-image">
+											<h4>Mikes Yagguers</h4>
+											
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{% static 'general/images/event/event3.jpg' %}" alt="event-image">
+											<h4>Bourbon & drums  </h4>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{% static 'general/images/event/event4.png' %}" alt="event-image">
+											<h4>Chester</h4>
+											
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{% static 'general/images/event/event5.png' %}" alt="event-image">
+											<h4>Los Nipones</h4>
+											
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="single-event">
+											<img class="img-responsive" src="{% static 'general/images/event/event6.png' %}" alt="event-image">
+											<h4>Escalante</h4>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="guitar">
+					<img class="img-responsive" src="{% static 'general/images/guitar.png' %}" alt="guitar">
+				</div>
+			</div>			
+		</div>
+	</section><!--/#event-->
+
+	<section id="about">
+		<div class="guitar2">				
+			<img class="img-responsive" src="{% static 'general/images/guitar2.jpg' %}" alt="guitar">
+		</div>
+		<div class="about-content">					
+					<h2>El Evento</h2>
+					<p>Este recital es para toda la familia, incluidos nuestros hijos perrunos!. El mismo tiene capacidad limitada ya que se realiza en el estadio del CAA por lo cual te pedimos que te registres </p>
+					<a href="{% url 'register'%}" class="btn btn-primary">Registrarse ahora! <i class="fa fa-angle-right"></i></a>
+				
+		</div>
+	</section><!--/#about-->
+	
+	<section id="twitter">
+		<div id="twitter-feed" class="carousel slide" data-interval="false">
+			<div class="twit">
+				<img class="img-responsive" src="{% static 'general/images/twit.png' %}" alt="twit">
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="text-center carousel-inner center-block">
+						<div class="item active">
+							<img src="{% static 'general/images/twitter/twitter1.png' %}" alt="">
+							<p>El año pasado fue genial! Este seguro que voy! </p>
+							<a href="https://twitter.com/?lang=es">http://t.co/yY7s1IfrAb 2 days ago</a>
+						</div>
+						<div class="item">
+							<img src="{% static 'general/images/twitter/twitter2.png' %}" alt="">
+							<p>Gracias intendente por estos eventos </p>
+							<a href="https://twitter.com/?lang=es">http://t.co/yY7s1IfrAb 2 days ago</a>
+						</div>
+						<div class="item">
+							<img src="{% static 'general/images/twitter/twitter3.png'%}" alt="">
+							<p>San Fermín tiene el festival de festivales </p>
+							<a href="https://twitter.com/?lang=es">http://t.co/yY7s1IfrAb 2 days ago</a>
+						</div>
+					</div>
+					<a class="twitter-control-left" href="#twitter-feed" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+					<a class="twitter-control-right" href="#twitter-feed" data-slide="next"><i class="fa fa-angle-right"></i></a>
+				</div>
+			</div>
+		</div>		
+	</section><!--/#twitter-feed-->
+
+</body>
+</html>
+
+{%endblock%}

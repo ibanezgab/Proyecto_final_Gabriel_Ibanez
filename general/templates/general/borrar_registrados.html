@@ -1,0 +1,21 @@
+{% extends 'general/base.html' %}
+
+{%load static %}
+
+{% block contenido_central  %}
+
+<div class="contact-section">
+	<div class="container">
+
+<form method="POST">
+    {% csrf_token %}
+
+    ¿Seguro que quiere eliminar el registro de: {{ object }}?
+    <p><input type="submit" value="Eliminar">
+    <button><a href="{% url 'lista_registrados' %}">Regresar</a></button></p>
+</form>
+
+</div> 
+</div> 
+
+{%endblock%}

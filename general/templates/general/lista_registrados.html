@@ -1,0 +1,32 @@
+{% extends 'general/base.html' %}
+
+{%load static %}
+
+{% block contenido_central  %}
+
+<div class="contact-section">
+	<div class="container">
+
+<h1 style="font-size:40px">Estas personas que seguro conoces, ya se anotaron! Qué estás esperando? </h1>  
+
+<ul> 
+    {% for registrado in object_list %}
+    
+    <li>
+        <td> Id: {{registrado.id}} </td>
+        <p><img src="{{registrado.foto.url}}" class="" width="200" height="250"> </p>
+        <p> Nombre:{{registrado.nombre}}</p>
+        
+        
+        <button><a  href="{% url 'editar_registrados' registrado.id %}">Editar</a></button>
+        <button><a  href="{% url 'detalle_registrados' registrado.id %}">Detalle</a></button>
+        <button><a  href="{% url 'borrar_registrados' registrado.id %}">Eliminar</a></button>
+            </p>
+    </li>
+    {% endfor %}
+
+</ul>
+</div> 
+</div> 
+
+{%endblock%}

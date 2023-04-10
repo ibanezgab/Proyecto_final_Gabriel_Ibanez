@@ -1,0 +1,30 @@
+{% extends 'general/base.html' %}
+
+{% block contenido_central  %}
+
+
+<html>
+
+<body>
+
+<div class="contact-section">
+    <div class="container">
+
+    <form action="" method="POST" style="color: purple"> {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type ="submit"> Iniciar sesión </button>
+        <button><a href="{% url 'index' %}">Volver</a></button>
+        
+    </form>
+</div>
+</div>	
+</body>
+
+</html>
+
+
+
+
+{% endblock  %}

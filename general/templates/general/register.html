@@ -1,0 +1,31 @@
+{% extends 'general/base.html' %}
+
+{%load static %}
+
+{% block contenido_central  %}
+
+<html>
+<body>
+
+	<section id="about">
+		<div class="guitar2">				
+			<img class="img-responsive" src="{% static 'general/images/guitar2.jpg' %}" alt="guitar">
+		</div>
+		<div class="about-content">
+
+		<form action="" method="POST" enctype="multipart/form-data" style="color: purple">
+		{% csrf_token %}
+	<table>
+	
+		{{form.as_table}}
+	
+	</table>
+	
+	<input type="submit" value="Agregar">
+	</form>
+
+</section>
+</body>
+</html>
+
+{%endblock%}

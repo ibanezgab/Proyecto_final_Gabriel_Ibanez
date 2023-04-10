@@ -1,0 +1,24 @@
+{% extends 'general/base.html' %}
+
+{%load static %}
+
+{% block contenido_central  %}
+
+<div class="contact-section">
+	<div class="container">
+
+<p><img src="{{registrado.foto.url}}" class="" width="200" height="200"> </p>
+<p>Nombre:   <i>{{ registrado.nombre }}</i></p>
+<p>Apellido: <i>{{ registrado.apellido }}</i></p>
+<p>Edad:     <i>{{ registrado.edad }}</i></p>
+<p>localidad:<i>{{ registrado.localidad }}</i></p>
+<p>e_mail:   <i>{{ registrado.e_mail }}</i></p>
+
+<button><a href="{% url 'lista_registrados' %}">Regresar</a></button>
+</p>
+</div> 
+</div> 
+
+
+{%endblock%}
+

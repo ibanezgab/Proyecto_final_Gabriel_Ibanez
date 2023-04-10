@@ -1,0 +1,41 @@
+{% extends 'general/base.html' %}
+
+
+{%load static %}
+
+
+{% block contenido_central  %}
+
+<div class="contact-section">
+	<div class="container">
+
+
+<h1 style="background-color: rgb(39, 238, 39);">{{mensaje}}</h1>
+
+{% if not request.user.is_authenticated %}
+
+
+<button><a href="{% url 'login' %}">Iniciar sesion</a></button>
+
+<p> Página para los organizadores del Evento </p>
+
+{% endif %}
+
+
+{% if request.user.is_authenticated %}
+                
+<h3 class="text-muted small mb-4 mb-lg-0">Hola, {{user.username}} </h3>
+
+{% endif %}
+
+{% if request.user.is_authenticated %}
+
+    <button><a href="{% url 'logout' %}">Salir</a></button>
+    <button><a href="{% url 'lista_registrados' %}">Nuestra Gente</a></button>
+        
+{% endif %}
+</div>
+</div>	
+
+{% endblock  %}
+
